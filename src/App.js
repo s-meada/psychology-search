@@ -30,6 +30,7 @@ function App() {
     })
     .then(res => res.json())
     .then(console.log)
+    .catch(() => console.log('no results')) // This catch block is where the code goes to when there are no search results. Put the no results page assignment inside it
 
   }
 
