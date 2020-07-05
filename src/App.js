@@ -38,7 +38,7 @@ function App() {
       .then(res => res.json())
       .then(value => setResultInfo(value))
       // .then(console.log)
-      .catch(() => console.log('no results')) // This catch block is where the code goes to when there are no search results. Put the no results page assignment inside it
+      .catch(() => setPage('error')) // This catch block is where the code goes to when there are no search results. Put the no results page assignment inside it
   }
 
   // first update checks make sure we don't search during the first render
@@ -61,10 +61,13 @@ function App() {
     </div>
     : resultInfo.length && page === 'search' ?
     <div>
+      <SearchBox submitSearch={submitSearch} />
       <ResultsList info={resultInfo} />
     </div>
+    : page === 'error' ?
+    <div>There are no results for {searchField}</div>
     :
-    <div>you reached the else page</div>
+    <div>Loading...</div>
   );
 }
 
