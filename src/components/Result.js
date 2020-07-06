@@ -1,15 +1,21 @@
 import React from 'react';
 
 const Result = (props) => {
-    const fullLink = props.link
-    // Get rid of extra quotes in the link string
-    const link = fullLink.substring(1, fullLink.length - 1)
+
+     // Remove extra quotes around the info
+    const getRidOfQuotes = (str) => {
+        return str.substring(1, str.length - 1)
+    }
+   
+    const link = getRidOfQuotes(props.link)
+    const title = getRidOfQuotes(props.title)
+    const snippet = getRidOfQuotes(props.snippet)
 
     return (
         <div>
-            <a rel={'external'} target="_blank" href={link}>Title: {props.title} </a>
-            <h3>Link: {props.link}</h3>
-            <h3>Snippet: {props.snippet}</h3>
+            <a rel={'external'} target="_blank" href={link}>Title: {title} </a>
+            <h3>Link: {link}</h3>
+            <h3>Snippet: {snippet}</h3>
         </div>
     );
 }
