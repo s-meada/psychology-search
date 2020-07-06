@@ -59,7 +59,7 @@ function App() {
     <div>
       <SearchBox submitSearch={submitSearch} />
     </div>
-    : resultInfo.length && page === 'search' ?
+    : Array.isArray(resultInfo) && resultInfo.length && page === 'search' ?
     <div>
       <SearchBox submitSearch={submitSearch} />
       <ResultsList info={resultInfo} />
