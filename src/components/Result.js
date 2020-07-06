@@ -9,13 +9,14 @@ const Result = (props) => {
    
     const link = getRidOfQuotes(props.link)
     const title = getRidOfQuotes(props.title)
-    const snippet = getRidOfQuotes(props.snippet)
+    // Handle the escape characters in the snippet
+    const snippet = JSON.parse(props.snippet)
 
     return (
         <div>
             <a rel={'external'} target="_blank" href={link}>Title: {title} </a>
             <h3>Link: {link}</h3>
-            <h3>Snippet: {snippet}</h3>
+            <h4>Snippet: {snippet}</h4>
         </div>
     );
 }
