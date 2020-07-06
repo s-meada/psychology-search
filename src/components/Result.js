@@ -2,7 +2,8 @@ import React from 'react';
 
 const Result = (props) => {
     const fullLink = props.link
-    const link = `https://${fullLink.substring(7, fullLink.length - 1)}`
+    // Get rid of extra quotes in the link string
+    const link = fullLink.substring(1, fullLink.length - 1)
 
     return (
         <div>
