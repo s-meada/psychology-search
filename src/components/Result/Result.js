@@ -14,9 +14,9 @@ const Result = (props) => {
 
     return (
         <div>
-            <a rel={'external'} target="_blank" href={link}>Title: {title} </a>
-            <h3>Link: {link}</h3>
-            <h4>Snippet: {snippet}</h4>
+            <a rel={'external'} target="_blank" href={link}>{title} </a>
+            <h5>{link}</h5>
+            <h4>{snippet}</h4>
         </div>
     );
 }

@@ -1,8 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './App.css';
-import SearchBox from './components/SearchBox';
-// import Result from './components/Result';
-import ResultsList from './components/ResultsList';
+import SearchBox from './components/SearchBox/SearchBox';
+import ResultsList from './components/ResultsList/ResultsList';
 
 function App() {
   const [searchField, setSearchField] = useState('')
