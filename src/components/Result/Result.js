@@ -1,4 +1,5 @@
 import React from 'react';
+import './Result.css'
 
 const Result = (props) => {
 
@@ -8,15 +9,19 @@ const Result = (props) => {
     }
    
     const link = getRidOfQuotes(props.link)
-    const title = getRidOfQuotes(props.title)
-    // Handle the escape characters in the snippet
+    // Handle the escape characters
     const snippet = JSON.parse(props.snippet)
+    const title = JSON.parse(props.title)
 
     return (
-        <div>
-            <a rel={'external'} target="_blank" href={link}>{title} </a>
-            <h5>{link}</h5>
-            <h4>{snippet}</h4>
+        <div className='result outline pa2'>
+            <div className='pointer'>
+                <a rel={'external'} target="_blank" href={link}>{title} </a>
+            </div>
+            <div className='info'>
+                <h5>{link}</h5>
+                <h4>{snippet}</h4>
+            </div>
         </div>
     );
 }
