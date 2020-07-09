@@ -14,7 +14,7 @@ const Result = (props) => {
     const title = JSON.parse(props.title)
 
     return (
-        <div className='result outline pa2'>
+        <div className='result pa2'>
             <div className='pointer'>
                 <a rel={'external'} target="_blank" href={link}>{title} </a>
             </div>

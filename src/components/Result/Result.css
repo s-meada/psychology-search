@@ -1,0 +1,41 @@
+.result {
+    display: inline-block;
+    width: 55%;
+    border: 2px solid lightblue;
+    margin-left: 7rem;
+    line-height: 0.1;
+    background-color: white;
+    margin-top: 0.25rem;
+
+
+    /*padding-top: 50%;
+    padding-bottom: 0; */
+    /* margin-top: 1;
+    margin-bottom: 1; */
+    /*
+    display: flex;
+    align-items: flex-start; */
+
+   
+}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #cc0000
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.info {
+    color: darkslategray
+}
+
+h4 {
+    line-height: 1.0;
+}

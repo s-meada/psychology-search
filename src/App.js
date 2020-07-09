@@ -2,6 +2,8 @@ import React, {useEffect, useRef, useState} from 'react';
 import './App.css';
 import SearchBox from './components/SearchBox/SearchBox';
 import ResultsList from './components/ResultsList/ResultsList';
+import Logo from './components/Logo/Logo';
+import Message from './components/Message/Message';
 
 function App() {
   const [searchField, setSearchField] = useState('')
@@ -54,19 +56,29 @@ function App() {
   
 
   return (
-    page === 'home' ?
     <div>
-      <SearchBox submitSearch={submitSearch} />
+      {
+        page === 'home' ?
+        <div>
+          <Logo />
+          <SearchBox location='center' submitSearch={submitSearch} />
+          <Message />
+        </div>
+        : Array.isArray(resultInfo) && resultInfo.length && page === 'search' ?
+        <div>
+          <SearchBox location='left' submitSearch={submitSearch} />
+          <h3>Showing results for: "{searchField}"</h3>
+          <ResultsList info={resultInfo} />
+        </div>
+        : page === 'error' ?
+        <div>
+          <SearchBox location='left' submitSearch={submitSearch} />
+          <h3>There are no results for {searchField}</h3>
+        </div>
+        :
+        <div>Loading...</div>
+      }
     </div>
-    : Array.isArray(resultInfo) && resultInfo.length && page === 'search' ?
-    <div>
-      <SearchBox submitSearch={submitSearch} />
-      <ResultsList info={resultInfo} />
-    </div>
-    : page === 'error' ?
-    <div>There are no results for {searchField}</div>
-    :
-    <div>Loading...</div>
   );
 }
 

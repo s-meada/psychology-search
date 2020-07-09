@@ -1,0 +1,19 @@
+/* .text {
+    line-height: 1.0;
+} */
+
+.big-text {
+    text-align: center;
+    color: orange;
+    font-size: calc(20px + 2vmin);
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    text-shadow: -1px -1px 0 purple, 1px -1px 0 purple, -1px 1px 0 orangered, 1px 1px 0 orangered;
+}
+
+.small-text {
+    text-align: center;
+    color: aliceblue;
+    font-size: calc(10px + 2vmin);
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    text-shadow: -1px -1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blueviolet, 1px 1px 0 blueviolet;
+}
