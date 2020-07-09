@@ -73,7 +73,7 @@ function App() {
         : page === 'error' ?
         <div>
           <SearchBox location='left' submitSearch={submitSearch} />
-          <h3>There are no results for {searchField}</h3>
+          <h3>"{searchField}" did not match any of our sources. </h3>
         </div>
         :
         <div>Loading...</div>
