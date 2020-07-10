@@ -3,9 +3,10 @@
     width: 55%;
     border: 2px solid lightblue;
     margin-left: 7rem;
-    line-height: 0.1;
+    line-height: 0.9;
     background-color: white;
     margin-top: 0.25rem;
+    word-wrap: break-word;
 
 
     /*padding-top: 50%;
@@ -34,8 +35,4 @@ a:hover {
 
 .info {
     color: darkslategray
-}
-
-h4 {
-    line-height: 1.0;
 }
