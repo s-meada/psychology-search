@@ -4,10 +4,12 @@ import Message from '../components/Message/Message';
 import SearchBox from '../components/SearchBox/SearchBox';
 
 const Home = (props) => {
-    //TODO: only on the home page, does not show the results for searches containing spaces
     return (
         <div>
-            <Logo />
+            {/* <Logo /> */}
+            <div className="big-text">
+                <h4>Psychology Search</h4>
+            </div>
             <SearchBox location='center' />
             <Message />
         </div>
