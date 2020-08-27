@@ -52,7 +52,7 @@ const SearchBox = (props) => {
     return (
         <div className={location}>
             <input
-                className='pa3 w-40'
+                className={'pa3 w-40 center'}
                 type='search'
                 placeholder='Search Powered by Google'
                 onKeyPress={e => e.key === 'Enter' && e.target.value.length ? submitSearch(e.target.value) : ''}
