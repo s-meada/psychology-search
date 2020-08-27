@@ -14,8 +14,10 @@ const SearchPage = (props) => {
         <div>
             <SearchBox location='left' searchQuery={query} returnResults={returnResults}/>
             {
-            resultsInfo === 'no results' ?
-                <h3>"{query}" did not match any of our sources. </h3>
+                resultsInfo === 'resource exhausted' ?
+                    <h3>Our API had too many calls for today.</h3>
+                : resultsInfo === 'no results' ?
+                    <h3>"{query}" did not match any of our sources. </h3>
                 : 
                 <div>
                 <h3>Showing results for: "{query}"</h3>
