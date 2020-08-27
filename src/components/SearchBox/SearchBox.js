@@ -46,7 +46,7 @@ const SearchBox = (props) => {
             console.log(`searching for: ${query}`)
             getSearchResults(query)
         }
-
+        // eslint-disable-next-line
     }, [props.searchQuery]) // Call useEffect only if the value of props.searchQuery changes
 
     return (

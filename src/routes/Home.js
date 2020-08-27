@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../components/Logo/Logo';
+// import Logo from '../components/Logo/Logo';
 import Message from '../components/Message/Message';
 import SearchBox from '../components/SearchBox/SearchBox';
 
