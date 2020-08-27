@@ -16,7 +16,7 @@ const Result = (props) => {
     return (
         <div className='result pa2'>
             <div className='pointer'>
-                <a rel={'external'} target="_blank" href={link}>{title} </a>
+                <a rel={'external noopener noreferrer'} target="_blank" href={link}>{title} </a>
             </div>
             <div className='info'>
                 <h5>{link}</h5>
