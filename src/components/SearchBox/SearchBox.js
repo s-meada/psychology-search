@@ -6,7 +6,7 @@ const SearchBox = (props) => {
     const location = props.location === 'center' ? 'pa2 center' : 'pa2 left'    
 
     const submitSearch = async function(searchText) {
-        props.history.push(`/${searchText}`)
+        props.history.push(`/search/${searchText}`)
 
         console.log(`submitSearch: ${searchText}`)
         // await getSearchResults(searchText)

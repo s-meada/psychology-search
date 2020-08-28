@@ -11,7 +11,7 @@ function App() {
     <div>
       <Switch>
         <Route exact path="/" render={() => <Home />} />
-        <Route exact path="/:searchQuery" render={(routeProps) => <SearchPage {...routeProps} />} />
+        <Route exact path="/search/:searchQuery" render={(routeProps) => <SearchPage {...routeProps} />} />
         <Route render={() => <ErrorPage /> } />
       </Switch>
     </div>
